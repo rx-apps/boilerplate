@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module version="0.2">
+	<title xml:lang="ko">보일러플레이트</title>
+	<description xml:lang="ko">라이믹스 모듈 보일러플레이트입니다.</description>
+	<version>0.0.1</version>
+	<date>2022-08-31</date>
+	<author email_address="rxapps@qroffle.com" link="https://github.com/rx-apps">
+		<name xml:lang="ko">rxApps</name>
+	</author>
+</module>

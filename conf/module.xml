@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<actions>
+		<!-- (일반) 뷰 액션 -->
+		<action name="dispBoilerplateIndex" type="view" index="true" />
+		
+		<!-- (일반) 컨트롤러 액션 -->
+		<action name="procBoilerplateIndex" type="controller" />
+		<action name="procBoilerplateAllowGet" type="controller" method="GET|POST" />
+		<action name="procBoilerplateNoCsrf" type="controller" check_csrf="false" />
+		
+		<!-- (관리자) 뷰 액션 -->
+		<action name="dispBoilerplateAdminIndex" type="view" admin_index="true" />
+		
+		<!-- (관리자) 컨트롤러 액션 -->
+		<action name="procBoilerplateAdminIndex" type="controller" />
+	</actions>
+</module>

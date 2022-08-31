@@ -24,6 +24,8 @@
 * `stdClass` 를 이용해야 하는 경우, `new stdClass()` 보다는 `(object) []` 를 권장합니다.
 
 ### 쿼리
+* `executeQuery`, `executeQueryArray` 의 결과값에 오류가 있다면, `\Rhymix\Framework\Exceptions\DBError` 예외를 던지도록 합니다.
+* 오류가 없을 경우 `WithPagination` 쿼리인 경우, `data` 와 `page_navigation` 이 포함된 객체를, 그렇지 않은 경우 `data` 값만을 반환하도록 합니다. 
 * `upsert` 쿼리를 사용할 경우, `upsert` 이외의 사용처가 없더라도 `insert`, `update` 쿼리를 함께 생성해 두는 것을 권장합니다.
 
 ### 템플릿 사용

@@ -26,6 +26,11 @@
 ### 쿼리
 * `upsert` 쿼리를 사용할 경우, `upsert` 이외의 사용처가 없더라도 `insert`, `update` 쿼리를 함께 생성해 두는 것을 권장합니다.
 
+### 템플릿 사용
+* `loop`, `cond` 등 HTML 속성으로 적용되는 템플릿 문법은 사용하지 않는 것을 원칙으로 합니다. 단, 속성에 조건문을 설정하는 `attr|cond` 형태는 허용합니다.
+* `{@ // <!--suppress CheckEmptyScriptTag, HtmlUnknownTag, HtmlUnknownAttribute --> }` 를 파일 상단에 추가합니다.
+* 주석을 작성할 경우, HTML 기본 주석보다 `{@ // <!-- document --> }` 형태로 작성하는 것을 권장합니다. 
+
 ## 언어파일 작성 지침
 
 ### 전역 지침

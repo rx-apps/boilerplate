@@ -40,6 +40,16 @@ class Boilerplate extends ModuleObject
 	}
 
 	/**
+	 * 뷰 인스턴스를 가져옵니다.
+	 * 
+	 * @return BoilerplateView
+	 */
+	protected function getView(): self
+	{
+		return getView($this->module);
+	}
+
+	/**
 	 * 관리자 모델 인스턴스를 가져옵니다.
 	 *
 	 * @return BoilerplateAdminModel
@@ -57,6 +67,16 @@ class Boilerplate extends ModuleObject
 	protected function getAdminController(): self
 	{
 		return getAdminController($this->module);
+	}
+
+	/**
+	 * 관리자 뷰 인스턴스를 가져옵니다.
+	 * 
+	 * @return BoilerplateAdminView
+	 */
+	protected function getAdminView(): self
+	{
+		return $this->getAdminView($this->module);
 	}
 
 	/**

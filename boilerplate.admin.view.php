@@ -26,6 +26,7 @@ class BoilerplateAdminView extends Boilerplate
 	 * 
 	 * @param int $menu_index
 	 * @return bool
+	 * @noinspection PhpUnusedPrivateMethodInspection
 	 */
 	private function setMenuInvisible(int $menu_index): bool
 	{
@@ -42,6 +43,7 @@ class BoilerplateAdminView extends Boilerplate
 	 * 대시보드 역할을 하는 메인 메뉴입니다.
 	 * 
 	 * @return void
+	 * @noinspection PhpUnused
 	 */
 	public function dispBoilerplateAdminIndex()
 	{

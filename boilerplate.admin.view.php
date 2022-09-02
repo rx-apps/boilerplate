@@ -22,21 +22,45 @@ class BoilerplateAdminView extends Boilerplate
 	}
 
 	/**
-	 * 메뉴를 보이지 않게 설정합니다.
-	 * 
+	 * 메뉴의 출력 여부를 설정합니다.
+	 *
 	 * @param int $menu_index
+	 * @param bool $visibility
 	 * @return bool
-	 * @noinspection PhpUnusedPrivateMethodInspection
 	 */
-	private function setMenuInvisible(int $menu_index): bool
+	private function setMenuVisibility(int $menu_index, bool $visibility): bool
 	{
 		if(!isset(self::$_menus[$menu_index]))
 		{
 			return false;
 		}
-		
-		self::$_menus[$menu_index][2] = false;
+
+		self::$_menus[$menu_index][2] = $visibility;
+		Context::set('menus', self::$_menus);
+
 		return true;
+	}
+
+	/**
+	 * 메뉴를 보이게 설정합니다.
+	 *
+	 * @param int $menu_index
+	 * @return bool
+	 */
+	private function setMenuVisible(int $menu_index): bool
+	{
+		return $this->setMenuVisibility($menu_index, true);
+	}
+
+	/**
+	 * 메뉴를 보이지 않게 설정합니다.
+	 *
+	 * @param int $menu_index
+	 * @return bool
+	 */
+	private function setMenuInvisible(int $menu_index): bool
+	{
+		return $this->setMenuVisibility($menu_index, false);
 	}
 
 	/**

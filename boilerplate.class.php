@@ -26,7 +26,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getModel(): self
 	{
-		return getModel($this->module);
+		return BoilerplateModel::getInstance();
 	}
 
 	/**
@@ -36,7 +36,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getController(): self
 	{
-		return getController($this->module);
+		return BoilerplateController::getInstance();
 	}
 
 	/**
@@ -46,7 +46,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getView(): self
 	{
-		return getView($this->module);
+		return BoilerplateView::getInstance();
 	}
 
 	/**
@@ -56,7 +56,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getAdminModel(): self
 	{
-		return getAdminModel($this->module);
+		return BoilerplateAdminModel::getInstance();
 	}
 
 	/**
@@ -66,7 +66,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getAdminController(): self
 	{
-		return getAdminController($this->module);
+		return BoilerplateAdminController::getInstance();
 	}
 
 	/**
@@ -76,7 +76,7 @@ class Boilerplate extends ModuleObject
 	 */
 	protected function getAdminView(): self
 	{
-		return $this->getAdminView($this->module);
+		return BoilerplateAdminView::getInstance();
 	}
 
 	/**

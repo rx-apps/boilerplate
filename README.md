@@ -27,11 +27,12 @@
 * `executeQuery`, `executeQueryArray` 의 결과값에 오류가 있다면, `\Rhymix\Framework\Exceptions\DBError` 예외를 던지도록 합니다.
 * 오류가 없을 경우 `WithPagination` 쿼리인 경우, `data` 와 `page_navigation` 이 포함된 객체를, 그렇지 않은 경우 `data` 값만을 반환하도록 합니다. 
 * `upsert` 쿼리를 사용할 경우, `upsert` 이외의 사용처가 없더라도 `insert`, `update` 쿼리를 함께 생성해 두는 것을 권장합니다.
+* 데이터를 전달할 때 객체보다 배열 형태를 권장합니다. 단, 이미 객체로 존재하는 데이터라면 객체 그대로 전달합니다.
 
 ### 템플릿 사용
 * `loop`, `cond` 등 HTML 속성으로 적용되는 템플릿 문법은 사용하지 않는 것을 원칙으로 합니다. 단, 속성에 조건문을 설정하는 `attr|cond` 형태는 허용합니다.
 * `{@ // <!--suppress CheckEmptyScriptTag, HtmlUnknownTag, HtmlUnknownAttribute --> }` 를 파일 상단에 추가합니다.
-* 주석을 작성할 경우, HTML 기본 주석보다 `{@ // <!-- document --> }` 형태로 작성하는 것을 권장합니다. 
+* 주석을 작성할 경우, 템플릿 엔진이 주석을 자동으로 제거할 수 있도록 `<!--// document -->` 형태로 작성합니다.
 
 ## 언어파일 작성 지침
 
